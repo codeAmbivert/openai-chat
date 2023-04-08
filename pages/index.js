@@ -6,6 +6,9 @@ export default function Home() {
   const openai = new OpenAIApi(
     new Configuration({
       apiKey: "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",
+      apiKey: "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",
+      apiKey: "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",
+      apiKey: "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",
     })
   );
 
