@@ -5,10 +5,9 @@ export default function Home() {
   const { Configuration, OpenAIApi } = require("openai");
   const openai = new OpenAIApi(
     new Configuration({
-      apiKey: "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",
-      apiKey: "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",
-      apiKey: "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",
-      apiKey: "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",
+      //This API key will not work. To get a working version 
+      // go to https://platform.openai.com/account/api-keys to get your own
+      apiKey: "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"
     })
   );
 
@@ -33,15 +32,18 @@ export default function Home() {
 
         userDiv.appendChild(userDivContent);
         chatContainer.appendChild(userDiv);
+        
+        // this variable allows you to save the input value before clearing the input field
         const newInputValue = input.value;
         input.value = "";
+        
+        //request a response from openai api
         const response = await openai.createCompletion({
           model: "text-davinci-003",
           prompt: newInputValue,
           max_tokens: 500,
         });
 
-        console.log(response);
         const aiDivContent = document.createTextNode(
           response.data.choices[0].text
         );
@@ -49,6 +51,7 @@ export default function Home() {
         chatContainer.appendChild(aiDiv);
       }
     };
+    
     sendMessage.addEventListener("click", sendMessages);
     input.addEventListener("keyup", function (event) {
       event.preventDefault();
@@ -58,11 +61,6 @@ export default function Home() {
       }
     });
   });
-
-  // sendMessage = async () => {
-  //   // e.preventDefault();
-
-  // };
 
   return (
     <div className="home">
