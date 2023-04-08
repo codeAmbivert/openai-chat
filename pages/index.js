@@ -5,7 +5,7 @@ export default function Home() {
   const { Configuration, OpenAIApi } = require("openai");
   const openai = new OpenAIApi(
     new Configuration({
-      apiKey: "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",
+      apiKey: "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",
     })
   );
 
