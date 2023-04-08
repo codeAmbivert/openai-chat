@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+To get the application to work. After downloading code and installing needed dependencies on your local maching, you have to get a personal API_KEY from https://platform.openai.com/account/api-keys and insert it in apiKey (key: value pair) in the index page. 
+
 ## Getting Started
 
 First, run the development server:
