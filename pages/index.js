@@ -5,17 +5,13 @@ export default function Home() {
   const { Configuration, OpenAIApi } = require("openai");
   const openai = new OpenAIApi(
     new Configuration({
-      apiKey: "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",
+      apiKey: "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",
     })
   );
 
-  let input;
-  let sendMessage;
-
-  // const sendMessage;
   useEffect(() => {
     let input = document.getElementById("inputMessage");
-    sendMessage = document.getElementById("inputMessage");
+    const sendMessage = document.getElementById("inputMessage");
     input.focus();
 
     const sendMessages = async () => {
@@ -42,7 +38,7 @@ export default function Home() {
           max_tokens: 500,
         });
 
-        // console.log(response.data.choices[0].message.content);
+        console.log(response);
         const aiDivContent = document.createTextNode(
           response.data.choices[0].text
         );
