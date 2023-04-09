@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     let input = document.getElementById("inputMessage");
-    const sendMessage = document.getElementById("inputMessage");
+    const sendMessage = document.getElementById("inputBtn");
     input.focus();
 
     const sendMessages = async () => {
