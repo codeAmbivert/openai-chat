@@ -69,6 +69,7 @@ export default function Home() {
         <div id="chat_container"></div>
 
         <div className="inputDiv">
+          <div className="input_innerDiv">
           <input
             type="text"
             id="inputMessage"
@@ -78,6 +79,7 @@ export default function Home() {
           <button type="button" id="inputBtn">
             Send
           </button>
+          </div>
         </div>
       </div>
     </div>
